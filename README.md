@@ -27,5 +27,5 @@ $ yarn start:prod
 
 #### To build the app
 ```shell
-$ yarn build:prop
+$ yarn build:prod
 ```
