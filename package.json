@@ -1,0 +1,70 @@
+{
+  "name": "react-express-boilerplate",
+	"description": "A React Express Webpack Boilerplate to get started to development.",
+  "version": "0.0.1",
+  "main": "./server.js",
+  "author": "Hiten Sharma",
+  "license": "MIT",
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/htadg/react-express-boilerplate"
+  },
+  "homepage": "https://github.com/htadg/react-express-boilerplate",
+  "keywords": [
+    "react",
+    "webpack",
+    "express",
+    "hot reloading",
+    "react-hot-reloader",
+    "starter",
+    "boilerplate",
+    "babel"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "start:prod": "better-npm-run start-prod",
+		"build:prod": "better-npm-run build-prod"
+  },
+	"betterScripts": {
+		"start-prod": {
+			"command": "webpack -p && node server.js",
+			"env": {
+				"NODE_PATH": "./src",
+				"NODE_ENV": "production",
+				"PORT": 3000
+			}
+		},
+		"build-prod": {
+			"command": "webpack --verbose --colors --display-error-details --config webpack.config.js && cp -r assets/* dist/",
+			"env": {
+				"NODE_PATH": "./src",
+				"NODE_ENV": "production",
+				"PORT": 3000
+			}
+		}
+	},
+  "dependencies": {
+    "better-npm-run": "^0.0.15",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "react-hot-loader": "^1.3.1",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.0",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-hot-middleware": "^2.18.0"
+  }
+}
