@@ -35,7 +35,7 @@
    }
   },
   "build-prod": {
-   "command": "webpack --verbose --colors --display-error-details --config webpack.config.js && cp -r assets/* dist/",
+   "command": "webpack --verbose --colors --display-error-details --config webpack.config.js -p && cp -r assets/* dist/",
    "env": {
     "NODE_PATH": "./src",
     "NODE_ENV": "production",
